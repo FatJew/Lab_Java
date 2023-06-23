@@ -4,8 +4,6 @@ import lombok.*;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @ToString(callSuper = true)
 class Motel extends Hotel {
     private String highwayNumber;

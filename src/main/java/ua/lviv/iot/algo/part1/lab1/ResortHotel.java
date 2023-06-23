@@ -4,8 +4,6 @@ import lombok.*;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @ToString(callSuper = true)
 class ResortHotel extends Hotel {
     private int adultPools;
@@ -21,7 +19,7 @@ class ResortHotel extends Hotel {
         this.complexName=complexName;
     }
 
-    @Override
+@Override
     public String getLocation() {
         return complexName;
     }

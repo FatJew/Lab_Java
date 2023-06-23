@@ -12,7 +12,12 @@ public abstract class Hotel {
     private int availableRooms;
     private int rating;
     private int bookedRoomsCount = 0;
-
+    public String getHeaders() {
+        return "name,totalRooms,availableRooms,rating,bookedRoomsCount";
+    }
+    public String toCSV() {
+        return name + "," + totalRooms+ "," + availableRooms+ "," + rating+ "," + bookedRoomsCount;
+    }
     public abstract String getLocation();
 }
 

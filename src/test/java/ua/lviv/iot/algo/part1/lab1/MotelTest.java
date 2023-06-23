@@ -70,4 +70,14 @@ class MotelTest {
 
         assertEquals("Motel(super=Hotel(name=Highway Motel, totalRooms=23, availableRooms=23, rating=3, bookedRoomsCount=0), highwayNumber=E61, highwayKilometer=540, startCity=Lviv, endCity=Kyiv)", motel.toString());
     }
+    @Test
+    void getHeaders() {
+        Motel motel = new Motel("Highway Motel", 23, 23, 3, 0,"E61", 540,"Lviv","Kyiv");
+        assertEquals("name,totalRooms,availableRooms,rating,bookedRoomsCount,highwayNumber,highwayKilometer,startCity,endCity", motel.getHeaders());
+    }
+    @Test
+    void toCSV() {
+        Motel motel = new Motel("Highway Motel", 23, 23, 3, 0,"E61", 540,"Lviv","Kyiv");
+        assertEquals("Highway Motel,23,23,3,0,E61,540,Lviv,Kyiv", motel.toCSV());
+    }
 }

@@ -69,4 +69,14 @@ class ResortHotelTest {
         ResortHotel resortHotel = new ResortHotel("Eurohotel",50 ,50,4,0,3,1,2,"Beach Resort");
         assertEquals("ResortHotel(super=Hotel(name=Eurohotel, totalRooms=50, availableRooms=50, rating=4, bookedRoomsCount=0), adultPools=3, childrenPools=1, restaurants=2, complexName=Beach Resort)", resortHotel.toString());
     }
+    @Test
+    void getHeaders() {
+        ResortHotel resortHotel = new ResortHotel("Eurohotel",50 ,50,4,0,3,1,2,"Beach Resort");
+        assertEquals("name,totalRooms,availableRooms,rating,bookedRoomsCount,adultPools,childrenPools,restaurants,complexName", resortHotel.getHeaders());
+    }
+    @Test
+    void toCSV() {
+        ResortHotel resortHotel = new ResortHotel("Eurohotel",50 ,50,4,0,3,1,2,"Beach Resort");
+        assertEquals("Eurohotel,50,50,4,0,3,1,2,Beach Resort", resortHotel.toCSV());
+    }
 }

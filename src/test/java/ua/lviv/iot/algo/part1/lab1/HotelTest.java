@@ -20,4 +20,6 @@ class HotelTest {
         assertEquals(null, hotels.getLocation());
 
     }
+
+
 }

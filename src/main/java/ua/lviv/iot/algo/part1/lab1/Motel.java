@@ -23,4 +23,12 @@ class Motel extends Hotel {
     public String getLocation() {
         return startCity + "-" + endCity + ", " + highwayKilometer + "km";
     }
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ",highwayNumber,highwayKilometer,startCity,endCity";
+    }
+    @Override
+    public String toCSV() {
+        return super.toCSV() + "," + highwayNumber+ "," + highwayKilometer+ "," + startCity+ "," + endCity;
+    }
 }

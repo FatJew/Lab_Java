@@ -23,4 +23,12 @@ class ResortHotel extends Hotel {
     public String getLocation() {
         return complexName;
     }
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ",adultPools,childrenPools,restaurants,complexName";
+    }
+    @Override
+    public String toCSV() {
+        return super.toCSV() + "," + adultPools+ "," + childrenPools+ "," + restaurants+ "," + complexName;
+    }
 }

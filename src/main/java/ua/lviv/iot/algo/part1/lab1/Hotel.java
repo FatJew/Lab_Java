@@ -1,28 +1,18 @@
 package ua.lviv.iot.algo.part1.lab1;
-
 import lombok.*;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString(callSuper = true)
-class ResortHotel extends Hotel {
-    private int adultPools;
-    private int childrenPools;
-    private int restaurants;
-    private String complexName;
+@ToString
+public abstract class Hotel {
+    private String name;
+    private int totalRooms;
+    private int availableRooms;
+    private int rating;
+    private int bookedRoomsCount = 0;
 
-    public ResortHotel( String name, int totalRooms, int availableRooms, int rating, int bookedRoomsCount, int adultPools,int childrenPools,int restaurants, String complexName ) {
-        super(name,totalRooms,availableRooms,rating,bookedRoomsCount);
-        this.adultPools=adultPools;
-        this.childrenPools=childrenPools;
-        this.restaurants=restaurants;
-        this.complexName=complexName;
-    }
-
-    @Override
-    public String getLocation() {
-        return complexName;
-    }
+    public abstract String getLocation();
 }
+
